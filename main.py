@@ -1,4 +1,4 @@
-import asyncio
+﻿import asyncio
 import os
 import pickle
 from typing import Optional, List, Dict, Any, Tuple
@@ -317,7 +317,7 @@ async def load_pickles():
     # Build normalized map
     TITLE_TO_IDX = build_title_to_idx_map(indices_obj)
 
-    tmdb_client = httpx.AsyncClient(timeout=12.0, http2=True)
+    tmdb_client = httpx.AsyncClient(timeout=12.0)
     TMDB_CACHE.clear()
 
     # sanity
